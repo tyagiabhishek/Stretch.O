@@ -2,13 +2,13 @@ import time
 import serial
 import subprocess
 count = 0
-while (count<2):
+while (count < 2):
     proceed = input("You are sitting since a long time. Its time to take a break? (Y/N)")
     if (proceed == "N"):
         time.sleep(100)
     else:
         break
-        
+
 timeout = int(input("Enter the value after which your computer should return to normal brightness in seconds: "))
 ser = serial.Serial('/dev/cu.usbmodem14201', 9600, timeout=timeout)
 
